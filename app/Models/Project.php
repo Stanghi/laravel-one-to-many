@@ -19,6 +19,11 @@ class Project extends Model
         'cover_image_original'
     ];
 
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
+
     public static function generateSlug($string)
     {
         $slug = Str::slug($string, '-');

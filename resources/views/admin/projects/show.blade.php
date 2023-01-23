@@ -15,6 +15,6 @@
         @endif
 
         <p>Client name: {{ $project->client_name }}</p>
-        <p>{{ $project->summary }}</p>
+        <p>{!! $project->summary !!}</p>
     </div>
 @endsection

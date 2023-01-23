@@ -1,12 +1,12 @@
 <nav>
     <ul>
-        <li class="{{ request()->routeIs('admin.dashboard') == 'admin' ? 'active' : '' }}">
+        <li class="{{ request()->segment(2) == '' ? 'active' : '' }}">
             <a href="{{ route('admin.dashboard') }}">
                 <i class="fa-solid fa-chart-pie"></i>Dashboard
             </a>
         </li>
 
-        <li class="{{ request()->routeIs('admin.projects.index') == 'projects' ? 'active' : '' }}">
+        <li class="{{ request()->segment(2) == 'projects' ? 'active' : '' }}">
             <a href="{{ route('admin.projects.index') }}">
                 <i class="fa-solid fa-hammer"></i>Projects
             </a>
@@ -19,4 +19,3 @@
         </li>
     </ul>
 </nav>
-{{-- class="debug" --}}
