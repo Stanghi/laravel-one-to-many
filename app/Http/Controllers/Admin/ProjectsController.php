@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProjectRequest;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Support\Facades\Storage;
 
 use function PHPUnit\Framework\returnSelf;
@@ -126,5 +127,11 @@ class ProjectsController extends Controller
         }
         $project->delete();
         return redirect()->route('admin.projects.index')->with('deleted', "$project->title eliminato correttamente");
+    }
+
+    public function types_project()
+    {
+        $types = Type::all();
+        return view('admin.projects.types_list', compact('types'));
     }
 }

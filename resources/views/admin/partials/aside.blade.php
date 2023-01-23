@@ -12,9 +12,15 @@
             </a>
         </li>
 
-        <li>
+        <li class="{{ request()->segment(3) == 'project-type' ? 'active' : '' }}">
+            <a href="{{ route('admin.types_project') }}">
+                <i class="fa-solid fa-folder"></i>Types list
+            </a>
+        </li>
+
+        <li class="">
             <a href="#">
-                <i class="fa-solid fa-question"></i>lorem
+                <i class="fa-solid fa-tag"></i>Types
             </a>
         </li>
     </ul>
