@@ -1,0 +1,74 @@
+@import "~bootstrap/scss/bootstrap";
+
+.debug {
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 1px solid black;
+}
+
+header nav {
+    height: 50px;
+}
+
+.content {
+    height: calc(100vh - 50px);
+    overflow: auto;
+}
+
+.aside {
+    margin: 0;
+    padding-top: 50px;
+    padding: 0;
+    height: calc(100vh - 50px);
+    background-color: red;
+
+    nav {
+        padding: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            &:hover {
+                border-radius: 5px;
+                background-color: white;
+            }
+            &:hover a {
+                color: #0d6efd;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+                i {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+
+    .active {
+        border-radius: 5px;
+        background-color: white;
+        a {
+            color: #0d6efd;
+        }
+    }
+}
+
+.card {
+    height: 100%;
+}
+
+.cover-image {
+    height: 100%;
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.ck-editor__editable[role="textbox"] {
+    min-height: 300px;
+}
