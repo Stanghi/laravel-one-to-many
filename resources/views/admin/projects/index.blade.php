@@ -35,7 +35,7 @@
                             <p class="card-text fw-bold mb-3">{{ $project->title }}</p>
 
                             <div class="mb-3">
-                                <span class="badge text-bg-success">{{ $project->type->name }}</span>
+                                <span class="badge text-bg-success">{{ $project->type?->name }}</span>
                             </div>
 
                             <div class="d-flex justify-content-between">

@@ -62,6 +62,18 @@
             </div>
 
             <div class="mb-3">
+                <label for="cover_image" class="form-label">Types</label>
+                <select class="form-select" name="type_id" aria-label="Default select example">
+                    <option value="">Select type</option>
+                    @foreach ($types as $type)
+                        <option @if ($type->id == old('type_id')) selected @endif value="{{ $type->id }}">
+                            {{ $type->name }}
+                        </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="mb-3">
                 <label for="summary" class="form-label">summary</label>
                 <textarea class="form-control" id="summary" name="summary" value="{{ old('summary') }}" rows="5"
                     placeholder="Add summary..."></textarea>
