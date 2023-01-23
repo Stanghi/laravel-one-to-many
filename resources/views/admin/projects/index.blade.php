@@ -21,38 +21,11 @@
             </div>
         @endif
 
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 mb-5">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 mb-5">
 
             @foreach ($projects as $project)
                 <div class="col p-3">
-                    <div class="card">
-                        @if ($project->cover_image)
-                            <img src="{{ asset('storage/' . $project->cover_image) }}"
-                                alt="{{ $project->cover_image_original }}">
-                        @endif
-
-                        <div class="card-body d-flex flex-column justify-content-between">
-                            <p class="card-text fw-bold mb-3">{{ $project->title }}</p>
-
-                            <div class="mb-3">
-                                <span class="badge text-bg-success">{{ $project->type?->name }}</span>
-                            </div>
-
-                            <div class="d-flex justify-content-between">
-                                <a href="{{ route('admin.projects.show', $project) }}" title="Show"
-                                    class="btn btn-outline-primary">
-                                    <i class="fa-solid fa-eye"></i>
-                                </a>
-
-                                <a href="{{ route('admin.projects.edit', $project) }}" title="Edit"
-                                    class="btn btn-outline-primary"><i class="fa-solid fa-pen"></i>
-                                </a>
-
-                                @include('admin.partials.form-delete', ['project' => $project])
-                            </div>
-
-                        </div>
-                    </div>
+                    @include('admin.partials.card')
                 </div>
             @endforeach
         </div>

@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
+    <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/admin') }}">
                 <div class="logo_laravel text-white">
@@ -14,7 +14,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item ">
                         <a class="nav-link text-white" href="{{ url('/') }}">
                             Go to site

@@ -36,7 +36,7 @@
             <div class="mb-3">
                 <label for="client_name" class="form-label">Client name *</label>
                 <input type="text" class="form-control @error('client_name') is-invalid @enderror" id="client_name"
-                    name="client_name" placeholder="Add client_name..." value="{{ old('client_name') }}">
+                    name="client_name" placeholder="Add client name..." value="{{ old('client_name') }}">
                 @error('client_name')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -50,7 +50,7 @@
                     name="cover_image" placeholder="Add image..." onchange="showImage(event)"
                     value="{{ old('cover_image') }}">
 
-                <div class="cover-image">
+                <div class="cover-image mt-3 debug">
                     <img id="output-image" src="" alt="">
                 </div>
 

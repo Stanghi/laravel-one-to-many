@@ -56,10 +56,12 @@
                         {{ $message }}
                     </div>
                 @enderror
-                <div class="cover-image">
-                    <img id="output-image" src="{{ asset('storage/' . $project->cover_image) }}"
-                        alt="{{ $project->cover_image_original }}">
-                </div>
+                @if ($project->cover_image)
+                    <div class="cover-image">
+                        <img id="output-image" src="{{ asset('storage/' . $project->cover_image) }}"
+                            alt="{{ $project->cover_image_original }}">
+                    </div>
+                @endif
             </div>
 
             <div class="mb-3">
